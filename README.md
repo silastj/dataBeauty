@@ -26,3 +26,53 @@
 *Rodar o prisma*
 `npx prisma studio `
 
+*ajudar na validação do typescript*
+`npm i zod `
+
+*add script de dev no package.json dentro de script*
+`"dev": "tsx src/server.ts" `
+
+*Antes de rodar npm run dev, rodamos*
+`npx prisma generate` 
+
+*Depois*
+`npm run dev`
+
+
+
+#########################
+`npm install sucrase nodemon -D `
+`npx prisma migrate dev`
+=> dá o nome para a migrate ex: create-table-user-post
+
+
+## CREATE USER
+- POST
+- http://localhost:3030/user
+{
+  "name": "Dantas",
+  "email": "dantas@dantas.com.br"
+}
+
+## FIND USERS
+- GET
+- http://localhost:3030/users
+
+
+## FIND USER
+- GET
+- http://localhost:3030/user/1       OBS: O número 1 é o ID
+
+
+## UDPATE USER
+- PUT
+- http://localhost:3030/user/1
+
+{
+  "name": "Dantas",
+  "email": "dantas@dantas.com.br"
+}
+
+## DELETE USER
+- DELETE
+- http://localhost:3030/user/1
