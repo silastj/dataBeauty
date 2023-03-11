@@ -28,7 +28,10 @@
 `npm install sucrase nodemon -D `
 
 ## RODAR O PROJETO EM DEV
-- `npm run dev `
+- ` baixar o projeto `
+- ` usar o node 17.0.0 `
+- ` npm install `
+- ` npm run dev `
 
 
 ## CREATE USER
