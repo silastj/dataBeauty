@@ -4,15 +4,6 @@
 `nvm use 17.0.0`
 `npm init -y`  
 
-*instalação do typescript types tsx tsup*
-`npm install -D typescript @types/node tsx tsup `
-
-*iniciar o typescript e trocar a configuração do typescript(tsconfig.json) do target es2020*
-` npx tsc --init `
-
-*frame no node  para criar uma rota simples*
-` npm i fastify `
-
 *deixar com ambiente de desenvolvimento* 
 ` npm i prisma -D `
 ` npm i @prisma/client `
@@ -22,28 +13,22 @@
 
 *alterar o banco de dados*
 `npx prisma migrate dev`
+=> dá o nome para a migrate ex: create-table-user-post
 
 *Rodar o prisma*
 `npx prisma studio `
 
-*ajudar na validação do typescript*
-`npm i zod `
-
 *add script de dev no package.json dentro de script*
-`"dev": "tsx src/server.ts" `
+`"dev": "nodemon src/server.js" `
 
 *Antes de rodar npm run dev, rodamos*
 `npx prisma generate` 
 
-*Depois*
-`npm run dev`
-
-
-
-#########################
+*Instalar o sucrase nodemon*
 `npm install sucrase nodemon -D `
-`npx prisma migrate dev`
-=> dá o nome para a migrate ex: create-table-user-post
+
+## RODAR O PROJETO EM DEV
+- `npm run dev `
 
 
 ## CREATE USER

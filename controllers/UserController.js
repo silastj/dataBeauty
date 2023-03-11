@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 export default {
+  // CREATE USER
   async createUser(req, res) {
     try {
       const {name, email} = req.body
@@ -20,10 +21,11 @@ export default {
     
       return res.json(user)    
     } catch (error) {
-      return res.json(`${error} No No Errouuuuuuuu`)
+      return res.json(`${error} No No Errouuuuuuuu Create User`)
     }    
   },
 
+  // FIND USERS
   async findAllUsers(req, res){
     try {
       const users = await prisma.user.findMany()
@@ -33,6 +35,7 @@ export default {
     }
   },
 
+  // FIND USER
   async findUser(req, res){
     try {
       const{id} = req.params;
@@ -44,6 +47,7 @@ export default {
     }
   },
 
+  // UPDATE USER
   async updateUser(req, res){
     try {
       const {id} = req.params
@@ -55,10 +59,11 @@ export default {
       user = await prisma.user.update({where: {id: Number(id)}, data:{name, email}})
       return res.json(user)
     } catch (error) {
-      return res.json(`${error} No No User Errrouuuuuuuuuuuu`)
+      return res.json(`${error} No No User Errrouuuuuuuuuuuu existing`)
     }
   },
 
+  //DELETE USER
   async deleteUser(req, res){
     try {
       const {id} = req.params
@@ -67,7 +72,7 @@ export default {
       if(!user) return res.json({error: "No existed user registered."})
 
       await prisma.user.delete({where: {id: Number(id)}})
-      return res.json("User delete Sucess")
+      return res.json("User delete Success")
     } catch (error) {
       return res.json(`${error} No Delete User Errrouuuuuuuuuuuu`)
     }
