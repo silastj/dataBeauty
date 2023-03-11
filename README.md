@@ -64,3 +64,7 @@
 ## DELETE USER
 - DELETE
 - http://localhost:3030/user/1
+
+## VERCEL
+- criar na raiz arquivo
+vercel.json
