@@ -5,9 +5,13 @@ export default {
   // CREATE USER
   async createUser(req, res) {
     try {
-      const {name, email} = req.body
+      const {name, email, apiKey} = req.body
       let user = await prisma.user.findUnique({ where: {email}})
     
+      if(apiKey !== 'abc'){
+        return res.json({error: "Apikey Error"})
+      }
+
       if(user) {
         return res.json({error: "User existing with email"})
       }

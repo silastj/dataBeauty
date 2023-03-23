@@ -24,6 +24,12 @@
 *Antes de rodar npm run dev, rodamos*
 `npx prisma generate` 
 
+*Depois que adicionar um banco e adicionar outro banco*
+npx prisma db push
+
+*Pegar banco de dados*
+npx prisma db pull
+
 *Instalar o sucrase nodemon*
 `npm install sucrase nodemon -D `
 
