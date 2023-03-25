@@ -33,6 +33,9 @@
 *Instalar o sucrase nodemon*
 `npm install sucrase nodemon -D `
 
+*Instalar o CLI do platscale*
+`brew install planetscale/tap/pscale`
+
 ## RODAR O PROJETO EM DEV
 - ` baixar o projeto `
 - ` usar o node 17.0.0 `

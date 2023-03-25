@@ -8,6 +8,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
   relationMode = "prisma"
 }
 
@@ -16,29 +17,4 @@ model User {
   name String @unique
   email String @unique
   createdAt DateTime @default(now())
-
-  // post Post[]
-  // active Boolean @default(true)
-  // role Role @default(USER)
-
-  @@map("users")
 }
-
-// model Post {
-//   id Int @id @default(autoincrement())
-//   content String
-//   userId Int
-//   author User @relation(fields: [userId], references: [id])
-// }
-// enum Role {
-//   USER
-//   ADMIN
-// }
-
-// model Photos {
-//   id Int @id @default(autoincrement())
-//   url String
-//   legend String?
-
-//   @@map("photos")
-// }
