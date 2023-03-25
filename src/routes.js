@@ -2,6 +2,7 @@ import { Router } from 'express'
 import UserController from '../controllers/UserController'
 
 const router = Router()
+  router.get("/", UserController.findAllUsers)
   router.post("/user", UserController.createUser)    
   router.get("/users", UserController.findAllUsers)
   router.get("/user/:id", UserController.findUser)
